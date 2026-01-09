@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Explore Home</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1142d4",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101522",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .no-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white transition-colors duration-200">
+<div class="relative flex min-h-screen w-full flex-col pb-24 overflow-x-hidden">
+<!-- Header -->
+<header class="sticky top-0 z-30 flex items-center justify-between bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md p-4 pb-2 transition-colors duration-200">
+<button class="flex size-10 items-center justify-center rounded-full bg-white dark:bg-slate-800 shadow-sm text-slate-900 dark:text-white transition-transform active:scale-95">
+<span class="material-symbols-outlined text-2xl">search</span>
+</button>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-2xl">travel_explore</span>
+<h2 class="text-lg font-bold leading-tight tracking-tight">Explore</h2>
+</div>
+<button class="relative flex size-10 items-center justify-center rounded-full bg-white dark:bg-slate-800 shadow-sm text-slate-900 dark:text-white transition-transform active:scale-95">
+<span class="material-symbols-outlined text-2xl">notifications</span>
+<span class="absolute top-2 right-2 h-2.5 w-2.5 rounded-full bg-red-500 ring-2 ring-white dark:ring-slate-800"></span>
+</button>
+</header>
+<!-- Headline -->
+<div class="px-4 pt-4 pb-2">
+<h1 class="text-[28px] font-extrabold leading-tight tracking-tight text-slate-900 dark:text-white">
+                Discover Scotland <br/> <span class="text-primary">&amp; Beyond</span>
+</h1>
+</div>
+<!-- Filter Chips -->
+<div class="flex w-full overflow-x-auto no-scrollbar gap-3 px-4 py-3">
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-slate-200 dark:bg-slate-800 pl-4 pr-3 transition-colors hover:bg-slate-300 dark:hover:bg-slate-700">
+<p class="text-sm font-bold">Month</p>
+<span class="material-symbols-outlined text-[20px]">expand_more</span>
+</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary text-white pl-4 pr-3 shadow-lg shadow-primary/30">
+<p class="text-sm font-bold">Destination</p>
+<span class="material-symbols-outlined text-[20px]">expand_more</span>
+</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-slate-200 dark:bg-slate-800 pl-4 pr-3 transition-colors hover:bg-slate-300 dark:hover:bg-slate-700">
+<p class="text-sm font-bold">Duration</p>
+<span class="material-symbols-outlined text-[20px]">expand_more</span>
+</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-slate-200 dark:bg-slate-800 pl-4 pr-3 transition-colors hover:bg-slate-300 dark:hover:bg-slate-700">
+<p class="text-sm font-bold">Price</p>
+<span class="material-symbols-outlined text-[20px]">expand_more</span>
+</button>
+</div>
+<!-- Featured Section -->
+<div class="pt-6 pb-2 px-4">
+<h3 class="text-xl font-bold leading-tight mb-4 flex items-center gap-2">
+                Featured Trip 
+                <span class="material-symbols-outlined text-amber-500 filled text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
+</h3>
+<div class="relative group cursor-pointer overflow-hidden rounded-2xl bg-white dark:bg-slate-800 shadow-md hover:shadow-xl transition-all duration-300">
+<div class="relative h-64 w-full overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10"></div>
+<!-- Image -->
+<div class="h-full w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Misty green mountains of the Isle of Skye" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCXoZ-VYh0jTkltEmZzri3At9_zrgzTHGYNjzhSGV85QLbRfzxBKh5m1uR0GwqhPKhRMmhO5l7KahCTD0nqw24npCz-15T2bj67yggYKkx2tRTEGDP-LZVQ-TFqm5rO06Tbg6lfCXVUBTYvSpx26N3yzsdxiQMRdBkLe0b6lDj2mcVmw7I6uiDwTQ70v9iyhcFmU0x9V7l7kDvx9GAkf8-eMLtlLrzk5tqNvYUif4-tfJNVQFWN_0V1Wbh5Y9njVtWeMMSoYcIQxaqN');"></div>
+<div class="absolute top-4 right-4 z-20">
+<button class="flex size-10 items-center justify-center rounded-full bg-white/20 backdrop-blur-md text-white transition-transform active:scale-90 hover:bg-white/30">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+</div>
+<div class="absolute bottom-4 left-4 right-4 z-20">
+<div class="flex items-center gap-2 mb-2">
+<span class="inline-flex items-center rounded-md bg-amber-500/90 px-2 py-1 text-xs font-bold text-white shadow-sm ring-1 ring-inset ring-amber-600/20">Selling Fast</span>
+<span class="inline-flex items-center rounded-md bg-black/40 backdrop-blur-md px-2 py-1 text-xs font-medium text-white ring-1 ring-inset ring-white/20">5 Days</span>
+</div>
+<h3 class="text-2xl font-bold text-white mb-1">Ultimate Skye Adventure</h3>
+<p class="text-slate-200 text-sm font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-base">calendar_month</span> Oct 12 - Oct 17
+                        </p>
+</div>
+</div>
+<div class="p-4 flex items-center justify-between">
+<div>
+<p class="text-xs text-slate-500 dark:text-slate-400 font-medium uppercase tracking-wider">Per Person</p>
+<p class="text-xl font-extrabold text-primary">$1,499</p>
+</div>
+<button class="rounded-xl bg-primary px-6 py-2.5 text-sm font-bold text-white shadow-lg shadow-primary/25 transition-transform active:scale-95">
+                        View Trip
+                    </button>
+</div>
+</div>
+</div>
+<!-- Upcoming Departures -->
+<div class="pt-8 px-4">
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-xl font-bold leading-tight">Upcoming Departures</h3>
+<button class="text-sm font-bold text-primary hover:underline">See All</button>
+</div>
+<div class="flex flex-col gap-5">
+<!-- Card 1 -->
+<div class="flex flex-col overflow-hidden rounded-2xl bg-white dark:bg-slate-800 shadow-[0_2px_8px_rgba(0,0,0,0.04)] dark:shadow-none border border-slate-100 dark:border-slate-700/50">
+<div class="h-48 w-full bg-cover bg-center relative" data-alt="Edinburgh city street view during winter festival" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCekYe22-b46d5cdvDcbn06oB8UdXk7Juhz83cHkIe05VttVLK770DC9NtXJzVsP3VlGkcFrj0ERtI_BFgAJPeljAcO9-N99omqLDTnZytqdG8SGlNkWtsSEdTNP4Un1B5dc8ufKUGdNXBudai0qQC3asYUCUJdJajovXID8AAfYLQ_gcCI1T4OKxo9Sr3kqnMMbnTIgAEdXO0Jgh58WR6VA7aqp-U0HoJlgKYTkydc7X0QWKZo4sMP4rTlWDkYihksgUyEOOE0QzkI');">
+<div class="absolute top-3 right-3">
+<button class="flex size-8 items-center justify-center rounded-full bg-black/30 backdrop-blur-sm text-white hover:bg-black/50 transition-colors">
+<span class="material-symbols-outlined text-lg">favorite</span>
+</button>
+</div>
+<div class="absolute bottom-3 left-3">
+<span class="inline-flex items-center gap-1 rounded-lg bg-red-100 dark:bg-red-900/40 px-2.5 py-1 text-xs font-bold text-red-700 dark:text-red-300 ring-1 ring-inset ring-red-600/10 backdrop-blur-md">
+<span class="material-symbols-outlined text-sm">local_fire_department</span>
+                                2 Seats Left
+                            </span>
+</div>
+</div>
+<div class="p-4">
+<div class="flex justify-between items-start mb-2">
+<h4 class="text-lg font-bold text-slate-900 dark:text-white leading-tight">Edinburgh New Year</h4>
+<div class="flex items-center gap-1 text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined text-lg filled" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-sm font-bold">4.9</span>
+</div>
+</div>
+<div class="flex items-center gap-2 text-slate-500 dark:text-slate-400 text-sm mb-4">
+<span class="material-symbols-outlined text-lg">calendar_today</span>
+<span>Dec 29 - Jan 2</span>
+<span class="mx-1">•</span>
+<span>5 Days</span>
+</div>
+<div class="flex items-center justify-between border-t border-slate-100 dark:border-slate-700 pt-3">
+<div>
+<span class="block text-xs text-slate-400 font-medium">From</span>
+<span class="text-lg font-extrabold text-primary">$1,200</span>
+</div>
+<button class="rounded-lg bg-slate-100 dark:bg-slate-700 px-4 py-2 text-sm font-bold text-slate-900 dark:text-white hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors">
+                                Details
+                            </button>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="flex flex-col overflow-hidden rounded-2xl bg-white dark:bg-slate-800 shadow-[0_2px_8px_rgba(0,0,0,0.04)] dark:shadow-none border border-slate-100 dark:border-slate-700/50">
+<div class="h-48 w-full bg-cover bg-center relative" data-alt="Scenic view of Lake Como in Italy with mountains" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBaucRdLt23XiGg11Cft-kycImrigS-sqjkDrwqtbn8aqWYNxHurbwXApccGvgm6-lXQruTFt-q94_TpLUPadixGJc6tnqvt7LMiuxrZ-KpGvxIIbMpccLml_jr-9-Cf4SBSQhO1CSr3sJ8a97H7e1hEAW24yutdRm-wtwA3e365J9cOr24bfj5rLfv9AnZvD5b4OXAX1XKvonuMrAoj0lVhL4-m1FB1N0BiDMnmLvpOh_ipnKbvcl0UnimhnVnWVbwYjq9oSACnyN1');">
+<div class="absolute top-3 right-3">
+<button class="flex size-8 items-center justify-center rounded-full bg-black/30 backdrop-blur-sm text-white hover:bg-black/50 transition-colors">
+<span class="material-symbols-outlined text-lg">favorite</span>
+</button>
+</div>
+<div class="absolute bottom-3 left-3">
+<span class="inline-flex items-center gap-1 rounded-lg bg-amber-100 dark:bg-amber-900/40 px-2.5 py-1 text-xs font-bold text-amber-700 dark:text-amber-300 ring-1 ring-inset ring-amber-600/10 backdrop-blur-md">
+<span class="material-symbols-outlined text-sm">hourglass_bottom</span>
+                                8 Seats Left
+                            </span>
+</div>
+</div>
+<div class="p-4">
+<div class="flex justify-between items-start mb-2">
+<h4 class="text-lg font-bold text-slate-900 dark:text-white leading-tight">Italian Lakes Retreat</h4>
+<div class="flex items-center gap-1 text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined text-lg filled" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-sm font-bold">4.8</span>
+</div>
+</div>
+<div class="flex items-center gap-2 text-slate-500 dark:text-slate-400 text-sm mb-4">
+<span class="material-symbols-outlined text-lg">calendar_today</span>
+<span>Apr 10 - Apr 17</span>
+<span class="mx-1">•</span>
+<span>7 Days</span>
+</div>
+<div class="flex items-center justify-between border-t border-slate-100 dark:border-slate-700 pt-3">
+<div>
+<span class="block text-xs text-slate-400 font-medium">From</span>
+<span class="text-lg font-extrabold text-primary">$2,450</span>
+</div>
+<button class="rounded-lg bg-slate-100 dark:bg-slate-700 px-4 py-2 text-sm font-bold text-slate-900 dark:text-white hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors">
+                                Details
+                            </button>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="flex flex-col overflow-hidden rounded-2xl bg-white dark:bg-slate-800 shadow-[0_2px_8px_rgba(0,0,0,0.04)] dark:shadow-none border border-slate-100 dark:border-slate-700/50">
+<div class="h-48 w-full bg-cover bg-center relative" data-alt="Green rolling hills of the Scottish Highlands" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDCDL6YloEhGlTtD_Wk2fcWm8sJEVzQ7t8XKeOhSi4KoaS9WuzBgW_teZOi6fIcmrUUb0fNDUG83GIUI4LrCh2ePsMYJJZH7qxawo3ZWWkCR_G4508r0OacmFPUQY7gHe9WE3rcVhpk3r4aMA28J056tsVX1XXDRp1LDh-gWNWqj8NrWiFZadhMzseCES3-w6WCHnAm25NZ3TXT8sh4Vk2bCbEhM7wZrKAuNJVb5Qy9Ke3PsPPAQHheRKKZRAoo15N4yrIstaTiIFdJ');">
+<div class="absolute top-3 right-3">
+<button class="flex size-8 items-center justify-center rounded-full bg-black/30 backdrop-blur-sm text-white hover:bg-black/50 transition-colors">
+<span class="material-symbols-outlined text-lg">favorite</span>
+</button>
+</div>
+<div class="absolute bottom-3 left-3">
+<span class="inline-flex items-center gap-1 rounded-lg bg-emerald-100 dark:bg-emerald-900/40 px-2.5 py-1 text-xs font-bold text-emerald-700 dark:text-emerald-300 ring-1 ring-inset ring-emerald-600/10 backdrop-blur-md">
+<span class="material-symbols-outlined text-sm">check_circle</span>
+                                Available
+                            </span>
+</div>
+</div>
+<div class="p-4">
+<div class="flex justify-between items-start mb-2">
+<h4 class="text-lg font-bold text-slate-900 dark:text-white leading-tight">Highlands Express</h4>
+<div class="flex items-center gap-1 text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined text-lg filled" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-sm font-bold">4.7</span>
+</div>
+</div>
+<div class="flex items-center gap-2 text-slate-500 dark:text-slate-400 text-sm mb-4">
+<span class="material-symbols-outlined text-lg">calendar_today</span>
+<span>May 05 - May 09</span>
+<span class="mx-1">•</span>
+<span>4 Days</span>
+</div>
+<div class="flex items-center justify-between border-t border-slate-100 dark:border-slate-700 pt-3">
+<div>
+<span class="block text-xs text-slate-400 font-medium">From</span>
+<span class="text-lg font-extrabold text-primary">$890</span>
+</div>
+<button class="rounded-lg bg-slate-100 dark:bg-slate-700 px-4 py-2 text-sm font-bold text-slate-900 dark:text-white hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors">
+                                Details
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="h-6"></div>
+</div>
+<!-- Bottom Navigation -->
+<nav class="fixed bottom-0 left-0 right-0 z-40 bg-white/90 dark:bg-slate-900/90 backdrop-blur-lg border-t border-slate-200 dark:border-slate-800 pb-safe">
+<div class="flex justify-around items-center h-16 max-w-md mx-auto">
+<button class="flex flex-col items-center justify-center gap-1 w-16 text-primary">
+<span class="material-symbols-outlined filled text-[26px]" style="font-variation-settings: 'FILL' 1;">explore</span>
+<span class="text-[10px] font-bold">Explore</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-1 w-16 text-slate-400 hover:text-slate-600 dark:hover:text-slate-300 transition-colors">
+<span class="material-symbols-outlined text-[26px]">airplane_ticket</span>
+<span class="text-[10px] font-medium">My Trips</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-1 w-16 text-slate-400 hover:text-slate-600 dark:hover:text-slate-300 transition-colors">
+<div class="relative">
+<span class="material-symbols-outlined text-[26px]">chat</span>
+<span class="absolute -top-0.5 -right-0.5 size-2 rounded-full bg-red-500"></span>
+</div>
+<span class="text-[10px] font-medium">Updates</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-1 w-16 text-slate-400 hover:text-slate-600 dark:hover:text-slate-300 transition-colors">
+<span class="material-symbols-outlined text-[26px]">person</span>
+<span class="text-[10px] font-medium">Profile</span>
+</button>
+</div>
+</nav>
+<div class="fixed bottom-0 left-0 right-0 h-[env(safe-area-inset-bottom)] bg-white/90 dark:bg-slate-900/90 z-40"></div>
+</body></html>

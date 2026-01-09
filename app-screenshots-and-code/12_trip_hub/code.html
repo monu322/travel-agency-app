@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Trip Hub - Scotland Explorer</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1142d4",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101522",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1e2433",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.75rem", "xl": "1rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.filled {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Custom scrollbar hiding for cleaner UI */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white antialiased selection:bg-primary selection:text-white pb-24">
+<!-- Top App Bar -->
+<div class="sticky top-0 z-50 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md px-4 py-3 flex items-center justify-between border-b border-transparent dark:border-white/5 transition-colors duration-200">
+<button class="flex h-10 w-10 items-center justify-center rounded-full hover:bg-black/5 dark:hover:bg-white/10 active:scale-95 transition-all text-slate-800 dark:text-white">
+<span class="material-symbols-outlined text-[24px]">arrow_back</span>
+</button>
+<h1 class="text-lg font-bold tracking-tight text-slate-900 dark:text-white">Trip Hub</h1>
+<button class="relative flex h-10 w-10 items-center justify-center rounded-full hover:bg-black/5 dark:hover:bg-white/10 active:scale-95 transition-all text-slate-800 dark:text-white">
+<span class="material-symbols-outlined text-[24px]">notifications</span>
+<span class="absolute top-2 right-2 h-2.5 w-2.5 rounded-full bg-red-500 border-2 border-background-light dark:border-background-dark"></span>
+</button>
+</div>
+<!-- Main Content Container -->
+<div class="flex flex-col w-full max-w-md mx-auto">
+<!-- Hero Card -->
+<div class="px-4 pt-4 pb-2">
+<div class="group relative overflow-hidden rounded-xl shadow-lg bg-slate-200 dark:bg-slate-800">
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent z-10"></div>
+<!-- Image of Scotland -->
+<div class="h-64 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Scenic view of Scottish Highlands with green mountains and cloudy sky" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC5pVx6cW5mv70yEe-_acNBprCKOdmFNStOzQ43xQB5qGbuxdrju_y3GhN7djXqdZ-fZO7VB8XeGvjru9Pjs8XXKQkfdN6X12idpP7nwabbSEGC2MC3Ig0pIyxyZTHZXQlAU9Rl_8BdVX5mebMlKNVZosnbHMq2KVzipczhJ9zkcy2u1nU7EGFJA37t40A36WchalMoDPFHkQC1CeRtwTt5WkSYGub45WaVxI1DGDsqHVxv9Hdr6QbKYozcwk0Rwba_4Tm8wc2bm9Jn");'>
+</div>
+<div class="absolute bottom-0 left-0 right-0 p-5 z-20 flex flex-col gap-1">
+<span class="inline-block px-2 py-0.5 rounded text-xs font-bold bg-primary text-white w-fit mb-1">UPCOMING</span>
+<h2 class="text-white text-2xl font-extrabold leading-tight shadow-black drop-shadow-sm">Highlands &amp; Isle of Skye Explorer</h2>
+<div class="flex items-center gap-2 text-white/90 mt-1">
+<span class="material-symbols-outlined text-[18px]">calendar_month</span>
+<p class="text-sm font-medium">Oct 12 - Oct 19, 2023</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick Actions Row -->
+<div class="px-4 py-4 grid grid-cols-3 gap-3">
+<button class="flex flex-col items-center gap-2 p-3 rounded-xl bg-surface-light dark:bg-surface-dark shadow-sm border border-slate-100 dark:border-slate-800 active:scale-95 transition-all">
+<div class="flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-[24px]">qr_code_2</span>
+</div>
+<span class="text-xs font-semibold text-slate-700 dark:text-slate-200">View Ticket</span>
+</button>
+<button class="flex flex-col items-center gap-2 p-3 rounded-xl bg-surface-light dark:bg-surface-dark shadow-sm border border-slate-100 dark:border-slate-800 active:scale-95 transition-all">
+<div class="flex items-center justify-center w-12 h-12 rounded-full bg-red-50 text-red-600 dark:bg-red-900/20 dark:text-red-400">
+<span class="material-symbols-outlined text-[24px]">emergency_home</span>
+</div>
+<span class="text-xs font-semibold text-slate-700 dark:text-slate-200">Emergency</span>
+</button>
+<button class="flex flex-col items-center gap-2 p-3 rounded-xl bg-surface-light dark:bg-surface-dark shadow-sm border border-slate-100 dark:border-slate-800 active:scale-95 transition-all">
+<div class="flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-[24px]">checklist</span>
+</div>
+<span class="text-xs font-semibold text-slate-700 dark:text-slate-200">Checklist</span>
+</button>
+</div>
+<!-- Segmented Control -->
+<div class="px-4 pb-4 sticky top-[65px] z-40 bg-background-light dark:bg-background-dark pt-2">
+<div class="flex p-1 bg-slate-200 dark:bg-slate-800/50 rounded-lg">
+<button class="flex-1 py-1.5 px-3 rounded-md text-sm font-bold shadow-sm bg-white dark:bg-surface-dark text-primary transition-all">
+                    Overview
+                </button>
+<button class="flex-1 py-1.5 px-3 rounded-md text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 transition-all">
+                    Itinerary
+                </button>
+<button class="flex-1 py-1.5 px-3 rounded-md text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 transition-all">
+                    Docs
+                </button>
+<button class="flex-1 py-1.5 px-3 rounded-md text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 transition-all">
+                    Group
+                </button>
+</div>
+</div>
+<!-- Updates Section (Announcements) -->
+<div class="px-4 mb-4">
+<div class="bg-amber-50 dark:bg-amber-900/20 border border-amber-100 dark:border-amber-800/30 rounded-xl p-4 flex gap-3 items-start">
+<span class="material-symbols-outlined text-amber-600 dark:text-amber-500 mt-0.5">campaign</span>
+<div class="flex-1">
+<p class="text-sm font-bold text-amber-900 dark:text-amber-400 mb-1">Weather Update</p>
+<p class="text-xs text-amber-800/80 dark:text-amber-200/70 leading-relaxed">
+                        Heavy rain expected on Day 3 during the Glencoe hike. Please ensure you pack a waterproof jacket and sturdy boots.
+                    </p>
+<p class="text-[10px] text-amber-800/60 dark:text-amber-200/40 mt-2 font-medium">Posted 2 hours ago</p>
+</div>
+</div>
+</div>
+<!-- Vital Info (Overview) -->
+<div class="px-4 mb-6">
+<h3 class="text-lg font-bold text-slate-900 dark:text-white mb-3">Trip Details</h3>
+<div class="bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm border border-slate-100 dark:border-slate-800 overflow-hidden divide-y divide-slate-100 dark:divide-slate-800">
+<div class="p-4 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined text-[18px]">location_on</span>
+</div>
+<div>
+<p class="text-xs font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wider">Meeting Point</p>
+<p class="text-sm font-semibold text-slate-900 dark:text-white mt-0.5">Edinburgh Waverley Station</p>
+</div>
+</div>
+<button class="text-primary text-xs font-bold">Map</button>
+</div>
+<div class="p-4 flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined text-[18px]">schedule</span>
+</div>
+<div>
+<p class="text-xs font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wider">Time</p>
+<p class="text-sm font-semibold text-slate-900 dark:text-white mt-0.5">08:30 AM</p>
+</div>
+</div>
+<div class="p-4 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</div>
+<div>
+<p class="text-xs font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wider">Status</p>
+<p class="text-sm font-semibold text-slate-900 dark:text-white mt-0.5">Confirmed</p>
+</div>
+</div>
+<span class="h-2 w-2 rounded-full bg-green-500 shadow-[0_0_8px_rgba(34,197,94,0.6)]"></span>
+</div>
+</div>
+</div>
+<!-- Itinerary Preview -->
+<div class="px-4 mb-6">
+<div class="flex items-center justify-between mb-3">
+<h3 class="text-lg font-bold text-slate-900 dark:text-white">Upcoming</h3>
+<button class="text-primary text-sm font-bold">See full itinerary</button>
+</div>
+<div class="relative pl-2 space-y-6 before:content-[''] before:absolute before:left-[19px] before:top-2 before:bottom-2 before:w-[2px] before:bg-slate-200 dark:before:bg-slate-800">
+<!-- Day 1 -->
+<div class="relative flex gap-4">
+<div class="flex flex-col items-center">
+<div class="w-9 h-9 rounded-full bg-primary border-4 border-background-light dark:border-background-dark z-10 flex items-center justify-center text-white shadow-sm">
+<span class="text-xs font-bold">01</span>
+</div>
+</div>
+<div class="flex-1 bg-surface-light dark:bg-surface-dark p-3 rounded-lg border border-slate-100 dark:border-slate-800 shadow-sm">
+<div class="flex justify-between items-start">
+<div>
+<h4 class="text-sm font-bold text-slate-900 dark:text-white">Departure &amp; Stirling Castle</h4>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-1 line-clamp-2">Depart from Edinburgh, visit the historic Stirling Castle, and enjoy a scenic drive through the Trossachs.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Day 2 -->
+<div class="relative flex gap-4">
+<div class="flex flex-col items-center">
+<div class="w-9 h-9 rounded-full bg-slate-200 dark:bg-slate-700 border-4 border-background-light dark:border-background-dark z-10 flex items-center justify-center text-slate-600 dark:text-slate-300">
+<span class="text-xs font-bold">02</span>
+</div>
+</div>
+<div class="flex-1 bg-surface-light dark:bg-surface-dark p-3 rounded-lg border border-slate-100 dark:border-slate-800 shadow-sm opacity-80">
+<div class="flex justify-between items-start">
+<div>
+<h4 class="text-sm font-bold text-slate-900 dark:text-white">Glencoe Valley Hike</h4>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-1">A guided walk through the dramatic landscapes of Glencoe, followed by lunch in Fort William.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick Docs List -->
+<div class="px-4 mb-8">
+<h3 class="text-lg font-bold text-slate-900 dark:text-white mb-3">Documents</h3>
+<div class="grid grid-cols-2 gap-3">
+<a class="flex items-center gap-3 p-3 rounded-lg bg-surface-light dark:bg-surface-dark border border-slate-100 dark:border-slate-800 hover:border-primary/30 transition-colors" href="#">
+<div class="h-8 w-8 rounded bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">receipt</span>
+</div>
+<div class="overflow-hidden">
+<p class="text-sm font-semibold truncate text-slate-900 dark:text-white">Invoice #4022</p>
+<p class="text-[10px] text-slate-500 dark:text-slate-400">PDF • 1.2 MB</p>
+</div>
+</a>
+<a class="flex items-center gap-3 p-3 rounded-lg bg-surface-light dark:bg-surface-dark border border-slate-100 dark:border-slate-800 hover:border-primary/30 transition-colors" href="#">
+<div class="h-8 w-8 rounded bg-purple-50 dark:bg-purple-900/20 text-purple-600 dark:text-purple-400 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">backpack</span>
+</div>
+<div class="overflow-hidden">
+<p class="text-sm font-semibold truncate text-slate-900 dark:text-white">Packing List</p>
+<p class="text-[10px] text-slate-500 dark:text-slate-400">24 Items</p>
+</div>
+</a>
+</div>
+</div>
+</div>
+<!-- Bottom Navigation -->
+<div class="fixed bottom-0 w-full z-50 bg-surface-light dark:bg-surface-dark border-t border-slate-200 dark:border-slate-800 pb-safe">
+<div class="max-w-md mx-auto flex items-center justify-around h-16 px-2">
+<button class="flex flex-col items-center justify-center w-full h-full text-slate-400 dark:text-slate-500 hover:text-primary dark:hover:text-primary transition-colors gap-1">
+<span class="material-symbols-outlined text-[24px]">home</span>
+<span class="text-[10px] font-medium">Home</span>
+</button>
+<button class="flex flex-col items-center justify-center w-full h-full text-primary gap-1">
+<span class="material-symbols-outlined filled text-[24px]">confirmation_number</span>
+<span class="text-[10px] font-bold">My Trips</span>
+</button>
+<button class="flex flex-col items-center justify-center w-full h-full text-slate-400 dark:text-slate-500 hover:text-primary dark:hover:text-primary transition-colors gap-1">
+<span class="material-symbols-outlined text-[24px]">chat</span>
+<span class="text-[10px] font-medium">Inbox</span>
+</button>
+<button class="flex flex-col items-center justify-center w-full h-full text-slate-400 dark:text-slate-500 hover:text-primary dark:hover:text-primary transition-colors gap-1">
+<span class="material-symbols-outlined text-[24px]">person</span>
+<span class="text-[10px] font-medium">Profile</span>
+</button>
+</div>
+<!-- Safe area spacing for iOS home indicator -->
+<div class="h-5 w-full bg-surface-light dark:bg-surface-dark"></div>
+</div>
+</body></html>

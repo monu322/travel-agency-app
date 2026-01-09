@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>My Trips Hub</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1142d4",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101522",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar hiding for cleaner mobile look */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display antialiased selection:bg-primary/20">
+<div class="relative flex h-full min-h-screen w-full flex-col overflow-hidden pb-20">
+<!-- Header -->
+<header class="sticky top-0 z-20 flex items-center justify-between bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md px-4 py-3 border-b border-gray-200/50 dark:border-gray-800/50">
+<div class="w-8"></div> <!-- Spacer for centering -->
+<h2 class="text-lg font-bold leading-tight tracking-tight text-slate-900 dark:text-white">My Trips</h2>
+<div class="w-8 flex justify-end">
+<!-- Optional action icon -->
+<button class="text-slate-500 hover:text-primary dark:text-slate-400 transition-colors">
+<span class="material-symbols-outlined text-[24px]">search</span>
+</button>
+</div>
+</header>
+<!-- Segmented Control -->
+<div class="px-4 py-4">
+<div class="flex h-10 w-full items-center justify-center rounded-lg bg-gray-200 dark:bg-gray-800 p-1">
+<label class="flex cursor-pointer h-full grow items-center justify-center rounded-[4px] px-2 relative transition-all duration-200">
+<input checked="" class="peer sr-only" name="trip-filter" type="radio" value="Upcoming"/>
+<div class="absolute inset-0 rounded-[4px] bg-transparent peer-checked:bg-white dark:peer-checked:bg-slate-700 peer-checked:shadow-sm transition-all"></div>
+<span class="relative z-10 text-sm font-semibold text-slate-500 peer-checked:text-primary dark:text-slate-400 dark:peer-checked:text-white">Upcoming</span>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center rounded-[4px] px-2 relative transition-all duration-200">
+<input class="peer sr-only" name="trip-filter" type="radio" value="Past"/>
+<div class="absolute inset-0 rounded-[4px] bg-transparent peer-checked:bg-white dark:peer-checked:bg-slate-700 peer-checked:shadow-sm transition-all"></div>
+<span class="relative z-10 text-sm font-semibold text-slate-500 peer-checked:text-primary dark:text-slate-400 dark:peer-checked:text-white">Past</span>
+</label>
+</div>
+</div>
+<!-- Scrollable Content -->
+<main class="flex-1 px-4 flex flex-col gap-6">
+<!-- Card 1: Scotland -->
+<article class="group relative flex flex-col overflow-hidden rounded-xl bg-white dark:bg-slate-800 shadow-sm border border-gray-100 dark:border-gray-700 transition-transform active:scale-[0.98]">
+<!-- Hero Image -->
+<div class="relative h-48 w-full overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Scenic view of lush green Scottish highlands with misty mountains in the background" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDUWPuMx4w8n3OkHuJT0wtwKEUQ70HfD1FU99lJB9S_RQHbbKkHNiDquCNy2OJAKD3z2b6WHdu5zlkiEzai213YSZ466JMGJNHL2bPevb7noOOXctCRxq9IX69Eb5W1RdcQBkGDC_zoGmsMWva1rfZ-jwB3s-351nokMbhF3TfTrYO09mxHC0edTNTCn2R5X4WaXIYEZJRaxO4jPNeMGs5yUNxy3Z-8DQfiSALOYbZs5bPAGOF0nQ9Kvt5AyT14qhVsBRvVVQ6VB106');">
+</div>
+<!-- Overlay Gradient -->
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<!-- Status Badge -->
+<div class="absolute top-3 right-3">
+<span class="inline-flex items-center rounded-full bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm px-2.5 py-1 text-xs font-semibold text-primary shadow-sm ring-1 ring-inset ring-primary/20">
+<span class="mr-1.5 h-1.5 w-1.5 rounded-full bg-primary animate-pulse"></span>
+                            Confirmed
+                        </span>
+</div>
+<!-- Location on Image -->
+<div class="absolute bottom-3 left-3 text-white">
+<div class="flex items-center gap-1 text-xs font-medium text-white/90">
+<span class="material-symbols-outlined text-[16px] fill-1">location_on</span>
+                            Scotland
+                        </div>
+</div>
+</div>
+<!-- Content -->
+<div class="flex flex-col gap-3 p-4">
+<div>
+<h3 class="text-lg font-bold text-slate-900 dark:text-white leading-tight">Highlands &amp; Isle of Skye Explorer</h3>
+<p class="text-sm font-medium text-slate-500 dark:text-slate-400 mt-1">Oct 12 - Oct 18, 2023</p>
+</div>
+<!-- Divider -->
+<div class="h-px w-full bg-gray-100 dark:bg-gray-700"></div>
+<!-- Footer: Group & Action -->
+<div class="flex items-center justify-between">
+<div class="flex items-center -space-x-2 overflow-hidden">
+<img alt="Traveler Avatar" class="inline-block h-7 w-7 rounded-full ring-2 ring-white dark:ring-slate-800 object-cover" data-alt="Portrait of a young woman traveler" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDV9LU2s5MnE2oAeSNuAcF_JZOZSuMjxbXIDLXChsl3u0EwYqdZ7-naDSDKVd-Lc3ZRnBZV_XIWLfQHu1NILH7Qnluf6tzhnlnzejy5YI44b6jlkoHrAb2QJZ65lUaMb_izI7KkEVpNyFJCod2p4KYcKFcOpMaAYi18OAxWUtmkjamll_jejm3Lj488XT_-m9sV7nIAAsNkt8xwKJJoK3Qd9zyFDhus42MDVI2C3wq5DlqqAqWcNK11ARB9m--7gJ7CmHcwSrHc_8yX"/>
+<img alt="Traveler Avatar" class="inline-block h-7 w-7 rounded-full ring-2 ring-white dark:ring-slate-800 object-cover" data-alt="Portrait of a young man traveler" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCs4QW1PKrR_KWS-KBr3t-Jjs5kzb3zv5rfsmbnKteuA38y5uVwxGk2Ys8UmODS1yFIaweaY84oE7Z0ZhJYSU8WQ4K-a2t9gTNuSAM1tniFsJ-NGZiM-J-5L1zSum5SCXkQE-pliwLoYrS_JSoZedxvQ8u-EM32HFoCmrelzaUFnKCaNJFvxKCtzU6yCrXHE0xfjETqaSOEhBEhyn-vB9mcavjaFAThwkm_m7TeNP06kEEDTdqtOD_VYtmdXf6clQGfTuMOiUEXvlfh"/>
+<img alt="Traveler Avatar" class="inline-block h-7 w-7 rounded-full ring-2 ring-white dark:ring-slate-800 object-cover" data-alt="Portrait of a woman smiling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFxJSw7eHELVI2GVsQmXuQgUB6ZPhvqvUVHdHmdRVna1605q93d8naYp--puuA6bq-QH4j89iRFdOtPeNdsYm8EpsRQtZ6qloptAU4M08fL2Y1hxRLUKGM31l3uFNLEGcmnIcnShtK06ZkIZaGdcvxoo0woFPCXcXot7Bth_pCen5mo0j_wz57qzYh1oba12RNB55j3wZ2tDwH6aeze_6Ew401hZG5tXjMTx8fZSbF0T7426vLNx3TQUskXhtY6nVdwo2LXjF02NGj"/>
+<div class="flex h-7 w-7 items-center justify-center rounded-full bg-gray-100 dark:bg-slate-700 ring-2 ring-white dark:ring-slate-800">
+<span class="text-[10px] font-bold text-slate-600 dark:text-slate-300">+14</span>
+</div>
+</div>
+<button class="text-sm font-semibold text-primary flex items-center gap-0.5 hover:underline">
+                            View Details
+                            <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Card 2: Benelux -->
+<article class="group relative flex flex-col overflow-hidden rounded-xl bg-white dark:bg-slate-800 shadow-sm border border-gray-100 dark:border-gray-700 transition-transform active:scale-[0.98]">
+<!-- Hero Image -->
+<div class="relative h-48 w-full overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Beautiful canal in Amsterdam with historic houses and bridge" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAnLXH3zAaV_ADRlylWKw7CQE5nLUMwLFBFSZ-esu6zlRwhF8O5MsDf2hzJ0QZo_z9RrwPTAtmM55i1S7vKegaZXFX6yZ1hXZ7ZptvSKE4wpeXIqdswjLdLJGobfev4NM56x9XiE-_IrgpdkXfvymL3txgUSms3dzjAaYNNyesnuccD6JaEjuD95DIrlsSy8w7H6b0U4xSiLXnGD77m0ALPebWK0zscLCdLPsyl-BvcgzzdC52AFjP3qBp9Nhg3D5Na_m29tRpq6_rf');">
+</div>
+<!-- Overlay Gradient -->
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<!-- Status Badge -->
+<div class="absolute top-3 right-3">
+<span class="inline-flex items-center rounded-full bg-amber-50 dark:bg-amber-900/40 backdrop-blur-sm px-2.5 py-1 text-xs font-semibold text-amber-600 dark:text-amber-400 shadow-sm ring-1 ring-inset ring-amber-500/20">
+                            Deposit Paid
+                        </span>
+</div>
+<!-- Location on Image -->
+<div class="absolute bottom-3 left-3 text-white">
+<div class="flex items-center gap-1 text-xs font-medium text-white/90">
+<span class="material-symbols-outlined text-[16px] fill-1">location_on</span>
+                           Netherlands, Belgium
+                       </div>
+</div>
+</div>
+<!-- Content -->
+<div class="flex flex-col gap-3 p-4">
+<div>
+<h3 class="text-lg font-bold text-slate-900 dark:text-white leading-tight">Best of Benelux</h3>
+<p class="text-sm font-medium text-slate-500 dark:text-slate-400 mt-1">May 05 - May 12, 2024</p>
+</div>
+<!-- Divider -->
+<div class="h-px w-full bg-gray-100 dark:bg-gray-700"></div>
+<!-- Footer: Group & Action -->
+<div class="flex items-center justify-between">
+<div class="flex items-center -space-x-2 overflow-hidden">
+<img alt="Traveler Avatar" class="inline-block h-7 w-7 rounded-full ring-2 ring-white dark:ring-slate-800 object-cover" data-alt="Portrait of a smiling man" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtsGoBEue79-1xhSEDcIp77GmaFlzM5erQskOA4LitXDi3k-EL4XIMZpzb1eITup7n4cwmxciM8X49alVl20HcA28KgMPgq7To7Gs5g4Q1xINmBnhrcA2z8BfKrhAYMhC9QTuwXdQwNHS9oR9keCxC3muYJhESjKGOrLa70Q1rgv4nLUAHkvEyurRvDLlqaHdCI5n3gIb3vX5ZShUyB2MOLqA3pCid8q-FthnoyhsISxwaRmw36Hb-z9JjHPmmCYnXqWcYs4AVOVlz"/>
+<img alt="Traveler Avatar" class="inline-block h-7 w-7 rounded-full ring-2 ring-white dark:ring-slate-800 object-cover" data-alt="Portrait of a female traveler" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBn1kSw_J0KGeJ6Kq9Grt61IxGbzHu_2ktPJuoUc4WhALu6DzhYtNYfTHzGPWIQixsXO04MK1__dMUYDcFY4gmQjr2JWolU9QTPTEeg6YkVLFIoqKSCB-CiEaY-h3LfJKP7ZNr4jK_A93rDjiM0wUgmyYRLxWHcb3-QaNPcjILPba9X9Sme4mNlLFjK3icL7mqph85B6Uqpi1Xr9fHMK08XOhO9sqkaKDyFbuQb3gWZL5nGacoBJCr2CiX87p8L8qpyofdC2ImCRBg3"/>
+<div class="flex h-7 w-7 items-center justify-center rounded-full bg-gray-100 dark:bg-slate-700 ring-2 ring-white dark:ring-slate-800">
+<span class="text-[10px] font-bold text-slate-600 dark:text-slate-300">+8</span>
+</div>
+</div>
+<button class="text-sm font-semibold text-primary flex items-center gap-0.5 hover:underline">
+                            View Details
+                            <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Example "Past" Empty State Suggestion (Hidden visually but included for completeness of flow) -->
+<!-- 
+            <div class="flex flex-col items-center justify-center py-10 opacity-60">
+                <div class="h-24 w-24 bg-gray-200 rounded-full mb-4"></div>
+                <p class="text-gray-500 font-medium">No past trips yet</p>
+            </div>
+            -->
+<div class="h-4"></div>
+</main>
+<!-- Bottom Navigation -->
+<nav class="fixed bottom-0 left-0 z-30 w-full border-t border-gray-200 dark:border-gray-800 bg-white/95 dark:bg-slate-900/95 backdrop-blur-lg pb-safe pt-1">
+<div class="flex items-center justify-around px-2 h-[60px] pb-2">
+<a class="group flex flex-1 flex-col items-center justify-center gap-1 p-1 text-slate-400 dark:text-slate-500 hover:text-slate-600 dark:hover:text-slate-300 transition-colors" href="#">
+<span class="material-symbols-outlined text-[24px] group-hover:-translate-y-0.5 transition-transform duration-200 font-light" style="font-variation-settings: 'FILL' 0, 'wght' 300;">explore</span>
+<span class="text-[10px] font-medium tracking-wide">Explore</span>
+</a>
+<a class="group flex flex-1 flex-col items-center justify-center gap-1 p-1 text-primary relative" href="#">
+<!-- Active Indicator Dot (Optional style) -->
+<!-- <div class="absolute top-1 right-1/3 w-1.5 h-1.5 rounded-full bg-primary"></div> -->
+<span class="material-symbols-outlined text-[24px] font-medium" style="font-variation-settings: 'FILL' 1, 'wght' 400;">luggage</span>
+<span class="text-[10px] font-bold tracking-wide">My Trips</span>
+</a>
+<a class="group flex flex-1 flex-col items-center justify-center gap-1 p-1 text-slate-400 dark:text-slate-500 hover:text-slate-600 dark:hover:text-slate-300 transition-colors" href="#">
+<span class="material-symbols-outlined text-[24px] group-hover:-translate-y-0.5 transition-transform duration-200 font-light" style="font-variation-settings: 'FILL' 0, 'wght' 300;">notifications</span>
+<span class="text-[10px] font-medium tracking-wide">Updates</span>
+</a>
+<a class="group flex flex-1 flex-col items-center justify-center gap-1 p-1 text-slate-400 dark:text-slate-500 hover:text-slate-600 dark:hover:text-slate-300 transition-colors" href="#">
+<span class="material-symbols-outlined text-[24px] group-hover:-translate-y-0.5 transition-transform duration-200 font-light" style="font-variation-settings: 'FILL' 0, 'wght' 300;">person</span>
+<span class="text-[10px] font-medium tracking-wide">Profile</span>
+</a>
+</div>
+</nav>
+</div>
+</body></html>

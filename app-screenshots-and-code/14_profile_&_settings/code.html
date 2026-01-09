@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Profile &amp; Settings</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1142d4",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101522",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar hiding for clean UI */
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white antialiased">
+<div class="relative flex flex-col min-h-screen w-full pb-28 overflow-x-hidden max-w-md mx-auto bg-background-light dark:bg-background-dark shadow-xl border-x border-gray-100 dark:border-gray-800">
+<!-- Top App Bar -->
+<header class="flex items-center justify-between p-4 pb-2 sticky top-0 z-10 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm transition-colors">
+<h1 class="text-xl font-bold leading-tight flex-1 text-center">Profile &amp; Settings</h1>
+</header>
+<!-- Profile Header -->
+<section class="flex flex-col items-center p-6 gap-6">
+<div class="relative group">
+<div class="h-28 w-28 rounded-full bg-cover bg-center border-4 border-white dark:border-gray-800 shadow-md" data-alt="Portrait of a smiling woman traveler in outdoors" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD7saCm32qyhiP3S0vVkdya7UpDWowVGB_OVnH1SnV9S-xiRMc4X5Rf-7afi_NTAEdpkgIc8kM0pHFdyX6t5iFRhft7rcAPtL1C-2S2cdMnquiANdEvQO2WmSSBnbpvZzpa_3InwawCdzwmBmiyi12cP8UEwg6gQ_RefK3Mnxo9hCvOs6TOAe5kxTnnrRumtKdx1trEKOPkNY_S3yP1XYuvVQ1OQCY06BbDWe4YWCGF2FeQjUiA7786uFyLU5msz30qvNf-cMX_NKHr");'>
+</div>
+<button class="absolute bottom-0 right-0 bg-primary text-white p-1.5 rounded-full border-2 border-white dark:border-gray-800 shadow-sm flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+</div>
+<div class="text-center space-y-1">
+<h2 class="text-2xl font-bold text-slate-900 dark:text-white">Jane Doe</h2>
+<div class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-primary/10 dark:bg-primary/20 text-primary text-sm font-semibold">
+<span class="material-symbols-outlined text-[16px] fill-1">verified</span>
+                    Explorer Level
+                </div>
+</div>
+<button class="w-full bg-white dark:bg-gray-800 text-slate-900 dark:text-white font-bold py-2.5 px-4 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm text-sm hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                Edit Profile
+            </button>
+</section>
+<!-- Settings Content -->
+<div class="px-4 space-y-6">
+<!-- Section 1: Account Preferences -->
+<div class="space-y-2">
+<h3 class="px-1 text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Account Preferences</h3>
+<div class="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-sm border border-gray-100 dark:border-gray-700 divide-y divide-gray-100 dark:divide-gray-700">
+<!-- Notifications -->
+<button class="w-full flex items-center gap-4 p-4 hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors text-left group">
+<div class="flex items-center justify-center rounded-lg bg-blue-50 dark:bg-blue-900/30 text-primary shrink-0 w-10 h-10">
+<span class="material-symbols-outlined">notifications</span>
+</div>
+<div class="flex-1">
+<p class="font-semibold text-slate-900 dark:text-white text-base">Notifications</p>
+</div>
+<span class="material-symbols-outlined text-gray-400 group-hover:text-primary transition-colors">chevron_right</span>
+</button>
+<!-- Payment Methods -->
+<button class="w-full flex items-center gap-4 p-4 hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors text-left group">
+<div class="flex items-center justify-center rounded-lg bg-blue-50 dark:bg-blue-900/30 text-primary shrink-0 w-10 h-10">
+<span class="material-symbols-outlined">credit_card</span>
+</div>
+<div class="flex-1">
+<p class="font-semibold text-slate-900 dark:text-white text-base">Payment Methods</p>
+</div>
+<span class="material-symbols-outlined text-gray-400 group-hover:text-primary transition-colors">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Section 2: Privacy & Group -->
+<div class="space-y-2">
+<h3 class="px-1 text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Privacy &amp; Groups</h3>
+<div class="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-sm border border-gray-100 dark:border-gray-700 divide-y divide-gray-100 dark:divide-gray-700">
+<!-- Roster Toggle -->
+<div class="flex items-center justify-between p-4 gap-4">
+<div class="flex items-center gap-4 flex-1">
+<div class="flex items-center justify-center rounded-lg bg-purple-50 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 shrink-0 w-10 h-10">
+<span class="material-symbols-outlined">groups</span>
+</div>
+<div class="flex flex-col">
+<p class="font-semibold text-slate-900 dark:text-white text-base">Show in Group Roster</p>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Let fellow travelers see you</p>
+</div>
+</div>
+<!-- Toggle Switch -->
+<button aria-checked="true" class="relative inline-flex h-7 w-12 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none bg-primary" role="switch">
+<span class="sr-only">Use setting</span>
+<span aria-hidden="true" class="pointer-events-none inline-block h-6 w-6 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out translate-x-5"></span>
+</button>
+</div>
+<!-- Privacy Policy -->
+<button class="w-full flex items-center gap-4 p-4 hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors text-left group">
+<div class="flex items-center justify-center rounded-lg bg-purple-50 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 shrink-0 w-10 h-10">
+<span class="material-symbols-outlined">policy</span>
+</div>
+<div class="flex-1">
+<p class="font-semibold text-slate-900 dark:text-white text-base">Privacy Policy</p>
+</div>
+<span class="material-symbols-outlined text-gray-400 group-hover:text-primary transition-colors">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Section 3: Support -->
+<div class="space-y-2">
+<h3 class="px-1 text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Support</h3>
+<div class="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-sm border border-gray-100 dark:border-gray-700 divide-y divide-gray-100 dark:divide-gray-700">
+<!-- Help Center -->
+<button class="w-full flex items-center gap-4 p-4 hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors text-left group">
+<div class="flex items-center justify-center rounded-lg bg-teal-50 dark:bg-teal-900/30 text-teal-600 dark:text-teal-400 shrink-0 w-10 h-10">
+<span class="material-symbols-outlined">help</span>
+</div>
+<div class="flex-1">
+<p class="font-semibold text-slate-900 dark:text-white text-base">Help Center</p>
+</div>
+<span class="material-symbols-outlined text-gray-400 group-hover:text-primary transition-colors">chevron_right</span>
+</button>
+<!-- Contact -->
+<button class="w-full flex items-center gap-4 p-4 hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors text-left group">
+<div class="flex items-center justify-center rounded-lg bg-teal-50 dark:bg-teal-900/30 text-teal-600 dark:text-teal-400 shrink-0 w-10 h-10">
+<span class="material-symbols-outlined">support_agent</span>
+</div>
+<div class="flex-1">
+<p class="font-semibold text-slate-900 dark:text-white text-base">Contact Support</p>
+</div>
+<span class="material-symbols-outlined text-gray-400 group-hover:text-primary transition-colors">chevron_right</span>
+</button>
+<!-- Terms -->
+<button class="w-full flex items-center gap-4 p-4 hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors text-left group">
+<div class="flex items-center justify-center rounded-lg bg-teal-50 dark:bg-teal-900/30 text-teal-600 dark:text-teal-400 shrink-0 w-10 h-10">
+<span class="material-symbols-outlined">gavel</span>
+</div>
+<div class="flex-1">
+<p class="font-semibold text-slate-900 dark:text-white text-base">Terms of Service</p>
+</div>
+<span class="material-symbols-outlined text-gray-400 group-hover:text-primary transition-colors">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Footer / Danger Zone -->
+<div class="pt-4 pb-8 flex flex-col items-center gap-4">
+<p class="text-xs text-slate-400">Version 1.0.2 (Build 204)</p>
+<button class="w-full py-3 text-slate-900 dark:text-white bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 rounded-lg font-bold text-sm transition-colors">
+                    Log Out
+                </button>
+<button class="py-2 px-4 text-red-600 dark:text-red-400 text-sm font-semibold hover:bg-red-50 dark:hover:bg-red-900/20 rounded-lg transition-colors">
+                    Delete Account
+                </button>
+</div>
+</div>
+<!-- Bottom Tab Navigation -->
+<nav class="fixed bottom-0 left-0 right-0 z-50 bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 pb-safe pt-2 px-4 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.05)] max-w-md mx-auto">
+<div class="flex justify-between items-center h-16">
+<!-- Explore -->
+<button class="flex flex-col items-center justify-center w-full gap-1 group">
+<span class="material-symbols-outlined text-gray-400 group-hover:text-gray-600 dark:group-hover:text-gray-300 text-[26px]">explore</span>
+<span class="text-[10px] font-medium text-gray-500 group-hover:text-gray-700 dark:group-hover:text-gray-300">Explore</span>
+</button>
+<!-- My Trips -->
+<button class="flex flex-col items-center justify-center w-full gap-1 group">
+<span class="material-symbols-outlined text-gray-400 group-hover:text-gray-600 dark:group-hover:text-gray-300 text-[26px]">airplane_ticket</span>
+<span class="text-[10px] font-medium text-gray-500 group-hover:text-gray-700 dark:group-hover:text-gray-300">My Trips</span>
+</button>
+<!-- Updates -->
+<button class="flex flex-col items-center justify-center w-full gap-1 group">
+<div class="relative">
+<span class="material-symbols-outlined text-gray-400 group-hover:text-gray-600 dark:group-hover:text-gray-300 text-[26px]">campaign</span>
+<span class="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 bg-red-500 rounded-full border-2 border-white dark:border-gray-900"></span>
+</div>
+<span class="text-[10px] font-medium text-gray-500 group-hover:text-gray-700 dark:group-hover:text-gray-300">Updates</span>
+</button>
+<!-- Profile (Active) -->
+<button class="flex flex-col items-center justify-center w-full gap-1">
+<span class="material-symbols-outlined text-primary fill-1 text-[26px]">person</span>
+<span class="text-[10px] font-bold text-primary">Profile</span>
+</button>
+</div>
+<!-- iOS Home Indicator Spacing -->
+<div class="h-4 w-full"></div>
+</nav>
+</div>
+</body></html>

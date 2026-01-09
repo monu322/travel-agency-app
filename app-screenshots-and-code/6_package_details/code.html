@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Package Details</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;family=Noto+Sans:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1142d4",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101522",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"],
+                        "body": ["Noto Sans", "sans-serif"],
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        /* Hide scrollbar for chrome/safari/opera */
+        .no-scrollbar::-webkit-scrollbar {
+          display: none;
+        }
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .no-scrollbar {
+          -ms-overflow-style: none;  /* IE and Edge */
+          scrollbar-width: none;  /* Firefox */
+        }
+        
+        details > summary {
+            list-style: none;
+        }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-[#0d111b] dark:text-gray-100 font-display min-h-screen flex flex-col pb-[160px]">
+<!-- Top Navigation Bar -->
+<div class="sticky top-0 z-40 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 transition-colors duration-300">
+<div class="flex items-center justify-between h-14 px-4">
+<button class="p-2 -ml-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 text-[#0d111b] dark:text-white transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<p class="font-bold text-lg opacity-0 transition-opacity duration-300 header-title">Highlands Explorer</p>
+<button class="p-2 -mr-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 text-primary font-bold text-sm transition-colors">
+<span class="material-symbols-outlined">ios_share</span>
+</button>
+</div>
+</div>
+<!-- Hero Section -->
+<div class="relative w-full aspect-[4/3] sm:aspect-[16/9] md:h-[480px]">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Misty green mountains and a loch in the Scottish Highlands" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBOcw1rmE_knB9zC5m43YWUYrybhTmmVvwKxg5oLYzSmvTGI-UkZ_4uWPvk1KaT5_rfZwzZm0yW4pPXksUGsSO2E523ZXJI8sFKgsCEZKDunxAzp9cqckWWDKEY7Tz_N-klmyii1ThaJoXhTRl7aKmT8Jn_7tiqQVniokEHjLEThD2_S8eqHxO5gkYRobyspMWEmhAJ1Mi71Y81_V4ZJMqYfDHaQ0tRIhrtLEHKaUjmpFIPElZzFlS9uNsWJHXDf2fdtegT15KHAxj6');">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 w-full p-5 text-white">
+<div class="flex items-center gap-2 mb-2">
+<span class="px-2 py-0.5 bg-white/20 backdrop-blur-md rounded text-xs font-bold uppercase tracking-wider">Group Tour</span>
+<div class="flex items-center text-yellow-400 text-sm font-bold">
+<span class="material-symbols-outlined text-[18px] fill-1">star</span>
+<span class="ml-1 text-white">4.8 (124)</span>
+</div>
+</div>
+<h1 class="text-3xl md:text-4xl font-black leading-tight mb-2 shadow-sm">Highlands Explorer</h1>
+<p class="text-gray-200 text-sm md:text-base font-medium">7 Days • Edinburgh &amp; Highlands • Physical: Moderate</p>
+</div>
+<button class="absolute bottom-5 right-5 bg-white/20 backdrop-blur-md hover:bg-white/30 text-white p-2 rounded-lg transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined">photo_library</span>
+</button>
+</div>
+<!-- Sticky Tabs -->
+<div class="sticky top-14 z-30 bg-background-light dark:bg-background-dark border-b border-gray-200 dark:border-gray-800 shadow-sm">
+<div class="flex px-4 overflow-x-auto no-scrollbar gap-6">
+<a class="py-3 border-b-[3px] border-primary text-primary font-bold text-sm whitespace-nowrap" href="#overview">Overview</a>
+<a class="py-3 border-b-[3px] border-transparent text-gray-500 dark:text-gray-400 hover:text-[#0d111b] dark:hover:text-gray-200 font-bold text-sm whitespace-nowrap transition-colors" href="#itinerary">Itinerary</a>
+<a class="py-3 border-b-[3px] border-transparent text-gray-500 dark:text-gray-400 hover:text-[#0d111b] dark:hover:text-gray-200 font-bold text-sm whitespace-nowrap transition-colors" href="#inclusions">Included</a>
+<a class="py-3 border-b-[3px] border-transparent text-gray-500 dark:text-gray-400 hover:text-[#0d111b] dark:hover:text-gray-200 font-bold text-sm whitespace-nowrap transition-colors" href="#faq">FAQ</a>
+</div>
+</div>
+<div class="flex flex-col gap-8 p-5">
+<!-- Overview -->
+<section class="flex flex-col gap-4" id="overview">
+<h2 class="text-xl font-bold dark:text-white">Experience the Magic</h2>
+<p class="text-gray-600 dark:text-gray-300 leading-relaxed text-base">
+                Discover the untamed beauty of Scotland on this 7-day guided adventure. From the cobbled streets of Edinburgh to the mysterious waters of Loch Ness, you'll immerse yourself in ancient history, breathtaking landscapes, and local culture. Perfect for solo travelers and couples alike.
+            </p>
+<!-- Highlights Grid -->
+<div class="grid grid-cols-2 gap-3 mt-2">
+<div class="bg-white dark:bg-gray-800 p-3 rounded-lg border border-gray-100 dark:border-gray-700 flex items-start gap-3 shadow-sm">
+<div class="size-8 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[20px]">castle</span>
+</div>
+<div>
+<p class="text-sm font-bold dark:text-white">Castle Stays</p>
+<p class="text-xs text-gray-500 dark:text-gray-400">1 Night Included</p>
+</div>
+</div>
+<div class="bg-white dark:bg-gray-800 p-3 rounded-lg border border-gray-100 dark:border-gray-700 flex items-start gap-3 shadow-sm">
+<div class="size-8 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[20px]">liquor</span>
+</div>
+<div>
+<p class="text-sm font-bold dark:text-white">Whisky Tour</p>
+<p class="text-xs text-gray-500 dark:text-gray-400">Tasting Included</p>
+</div>
+</div>
+<div class="bg-white dark:bg-gray-800 p-3 rounded-lg border border-gray-100 dark:border-gray-700 flex items-start gap-3 shadow-sm">
+<div class="size-8 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[20px]">directions_bus</span>
+</div>
+<div>
+<p class="text-sm font-bold dark:text-white">Transport</p>
+<p class="text-xs text-gray-500 dark:text-gray-400">Luxury Coach</p>
+</div>
+</div>
+<div class="bg-white dark:bg-gray-800 p-3 rounded-lg border border-gray-100 dark:border-gray-700 flex items-start gap-3 shadow-sm">
+<div class="size-8 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[20px]">groups</span>
+</div>
+<div>
+<p class="text-sm font-bold dark:text-white">Small Group</p>
+<p class="text-xs text-gray-500 dark:text-gray-400">Max 16 People</p>
+</div>
+</div>
+</div>
+</section>
+<div class="h-px w-full bg-gray-200 dark:bg-gray-800"></div>
+<!-- Itinerary -->
+<section class="flex flex-col gap-4" id="itinerary">
+<div class="flex items-center justify-between">
+<h2 class="text-xl font-bold dark:text-white">Itinerary Preview</h2>
+<button class="text-primary text-sm font-bold">Expand All</button>
+</div>
+<div class="relative pl-2 space-y-8">
+<!-- Vertical Line -->
+<div class="absolute top-2 left-[15px] h-[calc(100%-20px)] w-0.5 bg-gray-200 dark:bg-gray-700 -z-10"></div>
+<!-- Day 1 -->
+<div class="relative flex gap-4">
+<div class="size-7 rounded-full bg-primary text-white flex items-center justify-center text-xs font-bold border-4 border-background-light dark:border-background-dark shrink-0 z-10">1</div>
+<div class="flex flex-col gap-1 pb-2">
+<h3 class="font-bold text-base dark:text-white">Arrival in Edinburgh</h3>
+<p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">Meet your guide and fellow travelers at 6 PM for a welcome drink. Overnight in Edinburgh city center.</p>
+</div>
+</div>
+<!-- Day 2 -->
+<div class="relative flex gap-4">
+<div class="size-7 rounded-full bg-primary text-white flex items-center justify-center text-xs font-bold border-4 border-background-light dark:border-background-dark shrink-0 z-10">2</div>
+<div class="flex flex-col gap-1 pb-2">
+<h3 class="font-bold text-base dark:text-white">Stirling &amp; The Trossachs</h3>
+<p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">Depart for the Highlands, stopping at Stirling Castle and passing through the scenic Trossachs National Park.</p>
+<div class="mt-2 h-32 w-full rounded-lg bg-gray-100 overflow-hidden">
+<img alt="View of Stirling Castle on a hill" class="w-full h-full object-cover" data-alt="Stirling Castle stone fortress on a green hill" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-X58u9kFL9dK5czLnGhJ6tGzdo468YygceJBV0Zc9d2d6eunvzeonJX1GROaxqFZHrjM_JlBPaEuhkzRad-Z6Xi8mATcWHiJp_HbC0RWUSW7fOQc0vVVsuftbx7kioAhDgrkeoJodFgMJ6sIjW-vYiuiOJznydJxSYcXK9XNUw_xRiPlbZPoVX2G_t2FJw5PQgJ9VmuSBQMZlr_MkHdgZgffMzj-balBwc4oQYoQCZKlMH2Izsw3s1UzVnpV2qWbzgjZO7M09biAH"/>
+</div>
+</div>
+</div>
+<!-- Day 3 -->
+<div class="relative flex gap-4">
+<div class="size-7 rounded-full bg-primary text-white flex items-center justify-center text-xs font-bold border-4 border-background-light dark:border-background-dark shrink-0 z-10">3</div>
+<div class="flex flex-col gap-1 pb-2">
+<h3 class="font-bold text-base dark:text-white">Isle of Skye Adventure</h3>
+<p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">A full day exploring the magical Isle of Skye, including the Old Man of Storr and Kilt Rock.</p>
+</div>
+</div>
+<!-- More Days Indicator -->
+<div class="relative flex gap-4">
+<div class="size-7 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-500 dark:text-gray-400 flex items-center justify-center text-[10px] font-bold border-4 border-background-light dark:border-background-dark shrink-0 z-10">
+<span class="material-symbols-outlined text-[16px]">more_horiz</span>
+</div>
+<div class="flex flex-col justify-center h-7">
+<p class="text-gray-500 dark:text-gray-400 text-sm font-bold">4 more days...</p>
+</div>
+</div>
+</div>
+<button class="w-full py-3 mt-2 rounded-lg border border-gray-200 dark:border-gray-700 text-primary font-bold text-sm hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                View Full Itinerary
+            </button>
+</section>
+<div class="h-px w-full bg-gray-200 dark:bg-gray-800"></div>
+<!-- Inclusions -->
+<section class="flex flex-col gap-4" id="inclusions">
+<h2 class="text-xl font-bold dark:text-white">What's Included</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-green-600 dark:text-green-400 shrink-0">check_circle</span>
+<p class="text-sm text-gray-700 dark:text-gray-300">6 nights boutique hotel accommodation</p>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-green-600 dark:text-green-400 shrink-0">check_circle</span>
+<p class="text-sm text-gray-700 dark:text-gray-300">Daily breakfast &amp; 3 dinners</p>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-green-600 dark:text-green-400 shrink-0">check_circle</span>
+<p class="text-sm text-gray-700 dark:text-gray-300">Local expert guide &amp; driver</p>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-green-600 dark:text-green-400 shrink-0">check_circle</span>
+<p class="text-sm text-gray-700 dark:text-gray-300">All entrance fees to castles</p>
+</div>
+<!-- Exclusions -->
+<div class="flex items-start gap-3 opacity-70 mt-2 md:mt-0">
+<span class="material-symbols-outlined text-gray-400 shrink-0">cancel</span>
+<p class="text-sm text-gray-500 dark:text-gray-400">International flights</p>
+</div>
+<div class="flex items-start gap-3 opacity-70">
+<span class="material-symbols-outlined text-gray-400 shrink-0">cancel</span>
+<p class="text-sm text-gray-500 dark:text-gray-400">Travel insurance</p>
+</div>
+</div>
+</section>
+<div class="h-px w-full bg-gray-200 dark:bg-gray-800"></div>
+<!-- Upcoming Dates -->
+<section class="flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<h2 class="text-xl font-bold dark:text-white">Upcoming Dates</h2>
+<a class="text-primary text-sm font-bold" href="#">See All</a>
+</div>
+<div class="flex overflow-x-auto gap-4 pb-4 -mx-5 px-5 no-scrollbar snap-x">
+<!-- Date Card 1 -->
+<div class="snap-center shrink-0 w-[240px] bg-white dark:bg-gray-800 p-4 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm flex flex-col gap-3 relative overflow-hidden group">
+<div class="absolute top-0 left-0 w-1 h-full bg-primary"></div>
+<div>
+<p class="text-xs font-bold text-gray-400 uppercase tracking-wider">August 2024</p>
+<p class="text-lg font-bold text-[#0d111b] dark:text-white">Aug 12 - Aug 19</p>
+</div>
+<div class="flex items-end justify-between mt-1">
+<div>
+<p class="text-xs text-green-600 font-bold bg-green-100 dark:bg-green-900/30 dark:text-green-400 px-2 py-0.5 rounded-full w-fit">4 spots left</p>
+<p class="text-lg font-bold text-primary mt-1">$1,400</p>
+</div>
+<button class="size-8 rounded-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Date Card 2 -->
+<div class="snap-center shrink-0 w-[240px] bg-white dark:bg-gray-800 p-4 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm flex flex-col gap-3 relative overflow-hidden group">
+<div>
+<p class="text-xs font-bold text-gray-400 uppercase tracking-wider">September 2024</p>
+<p class="text-lg font-bold text-[#0d111b] dark:text-white">Sep 05 - Sep 12</p>
+</div>
+<div class="flex items-end justify-between mt-1">
+<div>
+<p class="text-xs text-gray-500 font-bold bg-gray-100 dark:bg-gray-700 dark:text-gray-400 px-2 py-0.5 rounded-full w-fit">Available</p>
+<p class="text-lg font-bold text-primary mt-1">$1,350</p>
+</div>
+<button class="size-8 rounded-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Date Card 3 -->
+<div class="snap-center shrink-0 w-[240px] bg-white dark:bg-gray-800 p-4 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm flex flex-col gap-3 relative overflow-hidden group">
+<div>
+<p class="text-xs font-bold text-gray-400 uppercase tracking-wider">October 2024</p>
+<p class="text-lg font-bold text-[#0d111b] dark:text-white">Oct 10 - Oct 17</p>
+</div>
+<div class="flex items-end justify-between mt-1">
+<div>
+<p class="text-xs text-gray-500 font-bold bg-gray-100 dark:bg-gray-700 dark:text-gray-400 px-2 py-0.5 rounded-full w-fit">Filling Fast</p>
+<p class="text-lg font-bold text-primary mt-1">$1,200</p>
+</div>
+<button class="size-8 rounded-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Accordion -->
+<section class="flex flex-col gap-3" id="faq">
+<h2 class="text-xl font-bold dark:text-white mb-1">Frequently Asked Questions</h2>
+<details class="group bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden">
+<summary class="flex justify-between items-center font-medium cursor-pointer p-4 text-sm dark:text-white select-none">
+<span>Do I need a visa for Scotland?</span>
+<span class="transition group-open:rotate-180">
+<span class="material-symbols-outlined">expand_more</span>
+</span>
+</summary>
+<div class="text-gray-600 dark:text-gray-300 text-sm px-4 pb-4 leading-relaxed">
+                     It depends on your citizenship. US, Canadian, and Australian citizens typically do not need a visa for tourism stays up to 6 months. Please check with your local embassy.
+                 </div>
+</details>
+<details class="group bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden">
+<summary class="flex justify-between items-center font-medium cursor-pointer p-4 text-sm dark:text-white select-none">
+<span>What is the group size?</span>
+<span class="transition group-open:rotate-180">
+<span class="material-symbols-outlined">expand_more</span>
+</span>
+</summary>
+<div class="text-gray-600 dark:text-gray-300 text-sm px-4 pb-4 leading-relaxed">
+                     We keep our groups small to ensure a personal experience. The maximum group size for this tour is 16 people.
+                 </div>
+</details>
+<details class="group bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden">
+<summary class="flex justify-between items-center font-medium cursor-pointer p-4 text-sm dark:text-white select-none">
+<span>Is airfare included?</span>
+<span class="transition group-open:rotate-180">
+<span class="material-symbols-outlined">expand_more</span>
+</span>
+</summary>
+<div class="text-gray-600 dark:text-gray-300 text-sm px-4 pb-4 leading-relaxed">
+                     No, international airfare is not included. You will need to arrange your own flights to and from Edinburgh Airport (EDI).
+                 </div>
+</details>
+</section>
+<!-- Gallery Grid -->
+<section class="flex flex-col gap-4 mb-4">
+<h2 class="text-xl font-bold dark:text-white">Gallery</h2>
+<div class="grid grid-cols-3 gap-2 h-48 md:h-64">
+<div class="col-span-2 h-full rounded-lg overflow-hidden relative group">
+<img alt="Scenic view of Loch Ness" class="w-full h-full object-cover transition duration-500 group-hover:scale-105" data-alt="Deep blue waters of Loch Ness surrounded by hills" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRSLUny4T_XeGqEgkbEbrRWEUQu60L8OtXlq8obmtqtolApNmG4v-iHqj6JHWG8OSCMdBr9xZWwyj8-XscjiiNo8naZzEwsry1zVdMXvfasGSsKo-i9YAsv8i82IJ1-9P-wd-Z15SoboYp02e8QMDzKaGHH_0t4fBnJiGeHTwtmxHphLHR5TzPCi_an_GC5L1WfZ1_78bjtoorvl8pIqF875ZBqj-AQTmwUWp7kfToLR02CGl2rBg09RYF63UlrTLmYa72S4ciuxnU"/>
+<div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition"></div>
+</div>
+<div class="flex flex-col gap-2 h-full">
+<div class="h-1/2 rounded-lg overflow-hidden relative group">
+<img alt="Traditional Bagpiper" class="w-full h-full object-cover transition duration-500 group-hover:scale-105" data-alt="Man in kilt playing bagpipes outdoors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0r1L8OfNHgUjhRySq_P-uFKI8HIhicplHbLKPeU5ZGuepX1B62dMHbFVzFzdXRyIdYJm7csJuZ1Cp_O4zg70dssy2dZy3SK3-gOTKqm8BBjiMNx0IHvIIGAczUSppxxCGbCtPe1O3j56NIPDCgrAeGk2fEKexS6eXpvUsdX3GhXEk592boTJp4FS1xlhCu2gfuZOidiSD4wqJ7numRNeaj9s4xs2qV835EICM7qx32TgkGbdpemXXz14j1Wh27FZvxA-yT6PVyUUt"/>
+</div>
+<div class="h-1/2 rounded-lg overflow-hidden relative group cursor-pointer">
+<img alt="Scottish Highland Cow" class="w-full h-full object-cover transition duration-500 group-hover:scale-105" data-alt="Close up of a hairy Highland Cow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJFOlsC8SPmaL3178r7rF84gfVdJQ7Xl7iEqz_d3dypWDqp3GGEFvc-lC5Y2Xsn69ktmGpdkTdPwhBLe93P_71jd1BKEpgalQeokmVEef3CVX3x9BSzJADs-nasu46-KZi3qLHS2iNVToo5UvKiEXwr-cF2ljDaMwvO-VZkr4WNUXbThI01Xjt8ojtnoDWzElpRttZeu-BKmOIRhwzINIRSorLIYHopj5OeYAuD9xWo9LbpfgwZxYd4Vijy-lT9HboW2e_rulmKIwe"/>
+<div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+<span class="text-white font-bold text-sm">+12</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Sticky Booking Bar -->
+<div class="fixed bottom-[60px] left-0 w-full bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 p-4 z-40 pb-4 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.05)]">
+<div class="flex items-center justify-between max-w-md mx-auto w-full gap-4">
+<div class="flex flex-col">
+<p class="text-xs text-gray-500 dark:text-gray-400 font-medium">Total Price</p>
+<div class="flex items-baseline gap-1">
+<span class="text-xs text-gray-400">From</span>
+<span class="text-xl font-black text-[#0d111b] dark:text-white">$1,200</span>
+</div>
+</div>
+<button class="flex-1 bg-primary hover:bg-blue-700 text-white font-bold rounded-lg h-12 px-6 flex items-center justify-center shadow-lg shadow-blue-500/30 transition-all active:scale-[0.98]">
+                Select Date
+            </button>
+</div>
+</div>
+<!-- Global Bottom Nav -->
+<div class="fixed bottom-0 left-0 w-full bg-background-light dark:bg-background-dark border-t border-gray-200 dark:border-gray-800 h-[60px] z-50">
+<div class="grid grid-cols-4 h-full">
+<a class="flex flex-col items-center justify-center gap-1 text-gray-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[24px]">home</span>
+<span class="text-[10px] font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined text-[24px] fill-1">explore</span>
+<span class="text-[10px] font-bold">Explore</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 text-gray-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[24px]">luggage</span>
+<span class="text-[10px] font-medium">Trips</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 text-gray-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[24px]">person</span>
+<span class="text-[10px] font-medium">Profile</span>
+</a>
+</div>
+</div>
+<!-- Header Scroll Script for UX -->
+<script>
+        const headerTitle = document.querySelector('.header-title');
+        const heroSection = document.querySelector('.relative.w-full');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                headerTitle.classList.remove('opacity-0');
+            } else {
+                headerTitle.classList.add('opacity-0');
+            }
+        });
+    </script>
+</body></html>

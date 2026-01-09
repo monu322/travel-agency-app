@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Travel Agency Splash Screen</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1142d4",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101522",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display antialiased">
+<div class="relative flex min-h-screen w-full flex-col overflow-hidden bg-background-light dark:bg-background-dark">
+<!-- Background Image with Overlay -->
+<div class="absolute inset-0 z-0 h-full w-full">
+<div class="h-full w-full bg-cover bg-center bg-no-repeat object-cover" data-alt="Misty green Scottish highlands landscape with rolling hills" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDygXJa5mX2agxLynDtVHvQl4hzvGAl4H8XRb0ZWSFg05bDB1_0mNFX3BU8IhRcaEYXtx0ePehim3MD7gUi5pQYTB_IiF5rK7TR0p3sSrt4l5J_9PMW_9N0Cadk-CpU6J8RqVM95HBhsyIiSCfg-_Jtd7F0a-C8i5t9CDUTPZJF-XDN_VKxUBItrslOIvBRmcEl_NGz-hNxqC-XdcfOakUfcW51WnJZbjbbh4LW_IU4z8DJ9s-VJCVStjoTBWRX_GqDo3tfF2kao1mQ');">
+</div>
+<!-- Gradient Overlay for Readability -->
+<div class="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-background-dark/95"></div>
+</div>
+<!-- Content Container -->
+<div class="relative z-10 flex flex-1 flex-col justify-between px-6 py-12">
+<!-- Top Section: Logo -->
+<div class="flex flex-1 flex-col items-center justify-start pt-16">
+<!-- Logo Placeholder -->
+<div class="flex h-16 w-16 items-center justify-center rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 shadow-xl mb-4">
+<span class="material-symbols-outlined text-4xl text-white">explore</span>
+</div>
+<h1 class="text-white tracking-light text-[32px] font-bold leading-tight text-center drop-shadow-md">Highland Escapes</h1>
+</div>
+<!-- Bottom Section: Value Prop & Loading -->
+<div class="flex flex-col gap-6 pb-8">
+<!-- Headline & Subheadline -->
+<div class="space-y-2 text-center">
+<h2 class="text-white tracking-tight text-[36px] font-extrabold leading-[1.1]">
+                        Explore Europe.
+                    </h2>
+<p class="text-white/90 text-xl font-medium leading-normal tracking-wide">
+                        Travel Together. Stress Free.
+                    </p>
+</div>
+<!-- Progress Bar -->
+<div class="mt-8 flex flex-col gap-3 px-4">
+<div class="w-full rounded-full bg-white/20 backdrop-blur-sm">
+<div class="h-1.5 rounded-full bg-primary shadow-[0_0_10px_rgba(17,66,212,0.6)]" style="width: 45%;"></div>
+</div>
+<p class="text-center text-xs font-medium text-white/50">Loading experiences...</p>
+</div>
+<!-- Footer / Version -->
+<div class="mt-4 text-center">
+<span class="text-[10px] text-white/30 uppercase tracking-widest">Version 1.0</span>
+</div>
+</div>
+</div>
+</div>
+</body></html>

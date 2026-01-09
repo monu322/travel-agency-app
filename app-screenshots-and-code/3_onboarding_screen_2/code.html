@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Onboarding Screen 2</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1142d4",
+                        "accent": "#10b981", 
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101522",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "3xl": "1.5rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom safe area spacing for notched devices */
+        .safe-top {
+            padding-top: max(2rem, env(safe-area-inset-top));
+        }
+        .safe-bottom {
+            padding-bottom: max(1rem, env(safe-area-inset-bottom));
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-background-light dark:bg-background-dark text-[#0d111b] dark:text-white h-screen overflow-hidden antialiased selection:bg-primary/20">
+<div class="relative h-full w-full flex flex-col justify-end">
+<!-- Background Image -->
+<!-- Using a dramatic Scottish landscape to match the theme -->
+<div class="absolute inset-0 z-0 h-full w-full">
+<div class="h-full w-full bg-cover bg-center bg-no-repeat" data-alt="Misty Scottish Highlands landscape with green rolling hills, dramatic clouds, and a winding road" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCGDNlg5ojYXfBLeLxGvBt1P5kTuJS_Zvu6vtD_bleCy0VgFxaQNsjV5KpHFaSxfTz5Os-cYmJxU1e9TD-HQ9mN0tYJjZY1OUq8zaFZKyrkqTAe9nCg-mbhoFfTUyZ9R6LShwwguOWZySquu-o4oNIyjgnvrfd0s4op4SM01381lN1udU6TRJfH3-ga9DmITOT-OXEU6VHC0SEGthYuSZJ3AkaSqlfRdm40SUpTcL3NeFezg-73afceXtz64wqHabEhnl2ow5ncM51g');">
+</div>
+<!-- Gradient Overlay: Ensures status bar legibility and smooth transition to card -->
+<div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60"></div>
+</div>
+<!-- Skip Button -->
+<div class="absolute top-0 right-0 z-20 p-6 safe-top">
+<button class="group flex items-center justify-center px-4 py-2 rounded-full backdrop-blur-md bg-black/20 hover:bg-black/30 transition-all cursor-pointer border border-white/10">
+<span class="text-white/90 group-hover:text-white font-semibold text-sm tracking-wide">Skip</span>
+</button>
+</div>
+<!-- Content Card -->
+<!-- Glassmorphism hint at the top, solid at the bottom for readability -->
+<div class="relative z-10 w-full bg-background-light dark:bg-[#1a202c] rounded-t-3xl shadow-[0_-10px_40px_rgba(0,0,0,0.2)] pb-6 pt-2 px-6 flex flex-col items-center">
+<!-- Drag Handle (Visual Affordance) -->
+<div class="w-12 h-1.5 bg-gray-300/60 dark:bg-gray-600 rounded-full my-4"></div>
+<!-- Icon Wrapper -->
+<!-- Using Emerald accent color as requested for "Highland green" feel -->
+<div class="mb-5 h-14 w-14 rounded-2xl bg-emerald-50 dark:bg-emerald-900/30 border border-emerald-100 dark:border-emerald-800 flex items-center justify-center text-emerald-600 dark:text-emerald-400 shadow-sm">
+<span class="material-symbols-outlined text-[28px]">map</span>
+</div>
+<!-- Headline -->
+<h1 class="text-[#0d111b] dark:text-white tracking-tight text-[28px] md:text-[32px] font-extrabold leading-[1.2] text-center mb-3">
+                Expertly Planned Adventures
+            </h1>
+<!-- Body Text -->
+<p class="text-gray-500 dark:text-gray-400 text-[16px] md:text-[17px] font-medium leading-relaxed text-center px-2 mb-8 max-w-sm">
+                Forget the logistics. Join our fixed-date group trips and focus purely on making memories with like-minded travelers.
+            </p>
+<!-- Page Indicators -->
+<!-- 2nd indicator active -->
+<div class="flex items-center justify-center gap-2 mb-8">
+<div class="h-2 w-2 rounded-full bg-gray-300 dark:bg-gray-600"></div>
+<!-- Active indicator with Primary Color -->
+<div class="h-2 w-8 rounded-full bg-primary"></div>
+<div class="h-2 w-2 rounded-full bg-gray-300 dark:bg-gray-600"></div>
+</div>
+<!-- Primary Action Button -->
+<div class="w-full safe-bottom">
+<button class="group w-full flex items-center justify-center gap-2 rounded-xl h-[56px] bg-primary hover:bg-[#0e36b0] text-white text-[17px] font-bold tracking-wide transition-all shadow-lg shadow-primary/25 active:scale-[0.98]">
+<span>Continue</span>
+<span class="material-symbols-outlined text-[20px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</body></html>
